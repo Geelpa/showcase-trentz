@@ -77,14 +77,14 @@ main {
   color: var(--main-text);
   border-bottom: 1px solid #ccc;
   padding: 12px;
-  transition: 300ms;
+  transition: 500ms;
   border-radius: 4px;
   background: rgb(231, 231, 231);
   margin-top: 1rem;
   filter: drop-shadow(0 2px 2px rgb(36, 36, 36, 0.3));
 }
 .produtcs .produtc:hover {
-  background: rgb(218, 218, 218);
+  background: rgb(218, 216, 216);
   color: #03377a;
 }
 
@@ -103,13 +103,16 @@ main {
   font-weight: 300;
 }
 
-
 @media (max-width: 600px) {
+  header {
+    width: 100vw;
+  }
   header .img {
-    transform: scale(0.5);
+    transform: scale(0.54);
     padding: 0;
-    height: 240px;
-    background: url("./imgs/capa-logo-mobile.png") no-repeat center;
+    height: 30vh;
+    width: 100vw;
+    background: url("./imgs/capa-logo-mobile.png") no-repeat center center;
   }
   nav ul li {
     font-size: 1rem;
@@ -162,8 +165,8 @@ main {
 }
 @media (max-width: 320px) {
   nav ul li {
-    font-size: 0.80rem;
-    padding: .75rem;
+    font-size: 0.8rem;
+    padding: 0.75rem;
   }
 
   .produtcs .produtc h2 {
