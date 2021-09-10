@@ -102,3 +102,9 @@ main .produtcs {
   margin-top: 16px;
   font-weight: 300;
 }
+
+@media (max-width: 600px){
+    header img{
+        display: none;
+    }
+}
