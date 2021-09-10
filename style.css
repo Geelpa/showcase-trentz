@@ -10,7 +10,7 @@
 
 body {
   width: 100vw;
-  background-color: #dfdfdf;
+  background: rgb(216, 216, 216);
 }
 header {
   background-color: #00285c;
@@ -19,9 +19,13 @@ header {
   justify-content: center;
 }
 
-header img {
+header .img {
+  background: url("./imgs/capa-logo.png") no-repeat center;
   padding: 12px;
   transform: scale(0.9);
+  height: 30vh;
+  width: 100%;
+  z-index: 10;
 }
 
 nav ul {
@@ -29,6 +33,7 @@ nav ul {
   justify-content: center;
   flex-direction: row;
   background: rgb(243, 243, 243);
+  filter: drop-shadow(0 2px 2px rgb(36, 36, 36, 0.3));
 }
 
 nav ul li {
@@ -37,7 +42,7 @@ nav ul li {
   font-weight: 400;
   font-size: 1.4rem;
   border-right: 1px solid rgb(156, 156, 156);
-  background: rgb(243, 243, 243);
+  background: rgb(245, 245, 245);
 }
 
 nav ul li:last-child {
@@ -52,20 +57,17 @@ nav ul li a {
   transition: 500ms;
 }
 nav ul li a:hover {
-  background: rgb(218, 217, 217);
+  background: rgb(224, 224, 224);
 }
 
 main {
   width: 90%;
   max-width: 980px;
   margin: auto;
-  background: rgb(243, 243, 243);
+  background: rgb(216, 216, 216);
   border-radius: 4px;
 }
-main .produtcs {
-  margin: 16px 0;
-  background: rgb(214, 214, 214);
-}
+
 .produtcs a {
   text-decoration: none;
 }
@@ -77,15 +79,13 @@ main .produtcs {
   padding: 12px;
   transition: 300ms;
   border-radius: 4px;
-
+  background: rgb(231, 231, 231);
+  margin-top: 1rem;
+  filter: drop-shadow(0 2px 2px rgb(36, 36, 36, 0.3));
 }
 .produtcs .produtc:hover {
-  background: rgb(199, 199, 199);
+  background: rgb(218, 218, 218);
   color: #03377a;
-}
-
-.produtcs .produtc:last-child {
-  border-bottom: none;
 }
 
 .produtc-info {
@@ -99,12 +99,77 @@ main .produtcs {
   font-weight: 500;
 }
 .produtcs .produtc h3 {
-  margin-top: 16px;
+  margin-top: 0.5rem;
   font-weight: 300;
 }
 
-@media (max-width: 600px){
-    header img{
-        display: none;
-    }
+
+@media (max-width: 600px) {
+  header .img {
+    transform: scale(0.5);
+    padding: 0;
+    height: 240px;
+    background: url("./imgs/capa-logo-mobile.png") no-repeat center;
+  }
+  nav ul li {
+    font-size: 1rem;
+    padding: 16px 16px;
+    font-weight: 500;
+  }
+  nav ul li a {
+    padding: 0;
+  }
+
+  main .produtcs {
+    margin: 12px 0;
+  }
+  .produtcs .produtc {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    margin: 12px 0;
+    border: 1px solid rgb(184, 184, 184);
+    filter: drop-shadow(0 2px 3px rgb(36, 36, 36, 0.2));
+  }
+  .produtc-info {
+    width: 100%;
+    padding: 0 12px;
+  }
+  .produtcs .produtc img {
+    width: 80px;
+  }
+  .produtcs .produtc h2 {
+    font-size: 1.2rem;
+  }
+  .produtcs .produtc h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  nav ul li {
+    font-size: 0.9rem;
+  }
+  .produtcs .produtc {
+    filter: drop-shadow(0px 2px 2px rgb(36, 36, 36, 0.2));
+  }
+  .produtcs .produtc h2 {
+    font-size: 1.1rem;
+  }
+  .produtcs .produtc h3 {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 320px) {
+  nav ul li {
+    font-size: 0.80rem;
+    padding: .75rem;
+  }
+
+  .produtcs .produtc h2 {
+    font-size: 1rem;
+  }
+  .produtcs .produtc h3 {
+    font-size: 0.85rem;
+  }
 }
